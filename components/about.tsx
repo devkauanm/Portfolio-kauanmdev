@@ -31,7 +31,7 @@ export function About() {
             <p>
               Tenho experiência desenvolvendo soluções que automatizam processos,
               integram APIs e utilizam Inteligência Artificial para aumentar
-              produtividade — sempre com foco em resultado real para quem usa.
+              produtividade. Sempre com foco em resultado real para quem usa.
             </p>
             <p>
               Minha atuação envolve desenvolvimento com{' '}

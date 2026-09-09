@@ -21,7 +21,7 @@ export const NAV_LINKS = [
 
 export const EMAIL = 'kauanm.dev@gmail.com'
 export const GITHUB_URL = 'https://github.com/devkauanm'
-export const LINKEDIN_URL = 'https://linkedin.com/in/kauanmartinssilva'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/kauan-martins-6482b62a1'
 
 export const TECH_STACK: { name: string; iconKey: TechIconKey }[] = [
   { name: 'Python', iconKey: 'python' },
@@ -31,7 +31,7 @@ export const TECH_STACK: { name: string; iconKey: TechIconKey }[] = [
   { name: 'APIs / Webhooks', iconKey: 'webhooks' },
   { name: 'PostgreSQL', iconKey: 'postgresql' },
   { name: 'Docker', iconKey: 'docker' },
-  { name: 'Git', iconKey: 'git' },
+  { name: 'GitHub', iconKey: 'github' },
   { name: 'Next.js', iconKey: 'nextjs' },
   { name: 'Tailwind CSS', iconKey: 'tailwindcss' },
   { name: 'OpenAI', iconKey: 'openai' },
@@ -90,7 +90,7 @@ export const PROJECTS: Project[] = [
         alt: 'Agente de IA integrado ao WhatsApp - etapa 3',
       },
     ],
-    repoUrl: 'https://github.com/devkauanm',
+    repoUrl: 'https://github.com/devkauanm/sdr-agent-ai',
   },
   {
     id: 'commercial-automation',
@@ -109,7 +109,6 @@ export const PROJECTS: Project[] = [
       src: '/Sistema-automacao-comercial.png',
       alt: 'Sistema de automação comercial',
     },
-    repoUrl: 'https://github.com/devkauanm',
   },
   {
     id: 'admin-dashboard',
@@ -175,7 +174,7 @@ export const PROJECTS: Project[] = [
         alt: 'Fluxo BDR para envio de mensagens e atualização do CRM',
       },
     ],
-    repoUrl: 'https://github.com/devkauanm',
+    repoUrl: 'https://github.com/devkauanm/bdr-agent-ai',
   },
 ]
 
@@ -227,8 +226,8 @@ export const TIMELINE: { year: string; title: string; desc: string }[] = [
   },
   {
     year: '2024',
-    title: 'Imersão em IA Generativa & n8n',
-    desc: 'Aprofundamento em orquestração de agentes, engenharia de prompt e automações low-code para escalar processos comerciais.',
+    title: 'Jovem Aprendiz Administrativo — EFD, Diadema',
+    desc: 'Atuação com clientes internacionais em inglês e espanhol, acompanhamento de pedidos para o mercado LATAM e gestão de devoluções, garantindo o fluxo operacional e a resolução de pendências. Também trabalhei com emissão e alteração de pedidos no sistema TOTVS Protheus.',
   },
   {
     year: '2022',

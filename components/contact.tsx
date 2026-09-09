@@ -89,7 +89,7 @@ export function Contact() {
               </div>
             </a>
 
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="grid grid-cols-2 gap-3">
               {SOCIALS.map((social) => {
                 const Icon = social.icon
                 return (
@@ -98,7 +98,7 @@ export function Contact() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-white/[0.03] px-4 py-2.5 text-sm text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-white/[0.03] px-4 py-2.5 text-sm text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
                   >
                     <Icon className="h-4 w-4" />
                     {social.label}

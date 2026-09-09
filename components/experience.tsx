@@ -92,7 +92,7 @@ export function Experience() {
                     Universidade São Judas Tadeu
                   </h4>
                   <span className="font-mono text-xs text-muted-foreground">
-                    2026 — 2030
+                    2026 — 2029
                   </span>
                 </div>
                 <p className="mt-1 text-sm text-muted-foreground">

@@ -1,7 +1,7 @@
 import type { IconType } from 'react-icons'
 import {
   SiDocker,
-  SiGit,
+  SiGithub,
   SiJavascript,
   SiN8N,
   SiNextdotjs,
@@ -22,7 +22,7 @@ export type TechIconKey =
   | 'webhooks'
   | 'postgresql'
   | 'docker'
-  | 'git'
+  | 'github'
   | 'nextjs'
   | 'tailwindcss'
   | 'openai'
@@ -72,7 +72,7 @@ export const TECH_ICON_MAP: Record<TechIconKey, TechIconDef> = {
   webhooks: { Icon: WebhooksIcon, color: '#22D3EE' },
   postgresql: { Icon: SiPostgresql, color: '#4169E1' },
   docker: { Icon: SiDocker, color: '#2496ED' },
-  git: { Icon: SiGit, color: '#F05032' },
+  github: { Icon: SiGithub, color: '#FFFFFF' },
   nextjs: { Icon: SiNextdotjs, color: '#FFFFFF' },
   tailwindcss: { Icon: SiTailwindcss, color: '#06B6D4' },
   openai: { Icon: OpenAiIcon, color: '#10A37F' },
