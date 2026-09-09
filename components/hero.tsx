@@ -33,7 +33,7 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      <div className="site-container relative grid grid-cols-1 items-center gap-14 pb-16 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+      <div className="site-container relative grid grid-cols-1 items-center gap-14 pb-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-10">
         <div>
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-white/[0.03] px-4 py-[7px] font-mono text-xs uppercase tracking-[0.1em] text-primary-light">
@@ -69,35 +69,28 @@ export function Hero() {
 
           <Reveal delay={0.32}>
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              <Button
-                asChild
-                size="lg"
+              <Link
+                href="#projects"
                 data-cursor-hover
-                className="rounded-full bg-gradient-to-r from-primary to-accent px-[26px] py-[15px] text-white glow-shadow transition-transform hover:scale-105"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent px-[26px] py-[15px] text-sm font-medium text-white glow-shadow transition-transform hover:scale-105"
               >
-                <Link href="#projects" className="flex items-center gap-2">
-                  Ver Projetos
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </Button>
+                Ver Projetos
+                <ArrowRight className="h-4 w-4" />
+              </Link>
 
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
+              <Link
+                href="#contact"
                 data-cursor-hover
-                className="rounded-full border-white/[0.14] bg-transparent px-[26px] py-[15px] hover:bg-white/5"
+                className="inline-flex items-center gap-2 rounded-full border border-white/[0.14] bg-transparent px-[26px] py-[15px] text-sm font-medium transition-colors hover:bg-white/5"
               >
-                <Link href="#contact" className="flex items-center gap-2">
-                  <MessageSquare className="h-4 w-4" />
-                  Entrar em Contato
-                </Link>
-              </Button>
+                <MessageSquare className="h-4 w-4" />
+                Entrar em Contato
+              </Link>
             </div>
           </Reveal>
         </div>
 
-        <Reveal direction="scale" delay={0.2} className="hidden lg:block">
+        <Reveal direction="scale" delay={0.2} className="order-last mx-auto block w-full max-w-[680px] lg:order-none lg:mx-0">
           <AutomationFlow />
         </Reveal>
       </div>

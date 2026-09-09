@@ -54,7 +54,8 @@ export type Project = {
   architecture: string
   tech: string[]
   tone: CoverTone
-  media: ProjectMedia
+  banner: { src: string; alt: string }
+  media: ProjectMedia | ProjectMedia[]
   demoUrl?: string
   repoUrl?: string
 }
@@ -63,32 +64,51 @@ export const PROJECTS: Project[] = [
   {
     id: 'whatsapp-ai-agent',
     title: 'Agente de IA para WhatsApp',
-    desc: 'Agente inteligente integrado ao WhatsApp utilizando IA, DeepRAG, OpenAI, Evolution API e Supabase para atendimento e qualificação de leads em tempo real.',
+    desc: 'Agente inteligente integrado ao WhatsApp utilizando IA, DeepRAG, OpenAI, WhatsApp API e Supabase para atendimento e qualificação de leads em tempo real.',
     architecture:
-      'A arquitetura segue um pipeline event-driven: mensagens chegam via Evolution API (webhook) e são enfileiradas no n8n. O fluxo consulta embeddings no Supabase (DeepRAG), monta o contexto e envia para a OpenAI. Respostas são validadas, persistidas e devolvidas ao WhatsApp com logs de conversa e métricas de qualificação de leads.',
+      'A arquitetura segue um pipeline event-driven: mensagens chegam via WhatsApp API (webhook) e são enfileiradas no n8n. O fluxo consulta embeddings no Supabase (DeepRAG), monta o contexto e envia para a OpenAI. Respostas são validadas, persistidas e devolvidas ao WhatsApp com logs de conversa e métricas de qualificação de leads.',
     tech: ['Python', 'n8n', 'OpenAI', 'Supabase', 'Webhook'],
     tone: 'blue',
-    media: {
-      type: 'image',
-      src: '/placeholder.svg',
-      alt: 'Print do agente de IA integrado ao WhatsApp',
+    banner: {
+      src: '/banner-agente-ia.png',
+      alt: 'Banner do agente de IA para WhatsApp',
     },
-    demoUrl: 'https://github.com/devkauanm',
+    media: [
+      {
+        type: 'image',
+        src: '/agente-ia-part1.png',
+        alt: 'Agente de IA integrado ao WhatsApp - etapa 1',
+      },
+      {
+        type: 'image',
+        src: '/agente-ia-part2.png',
+        alt: 'Agente de IA integrado ao WhatsApp - etapa 2',
+      },
+      {
+        type: 'image',
+        src: '/agente-ia-part3.png',
+        alt: 'Agente de IA integrado ao WhatsApp - etapa 3',
+      },
+    ],
     repoUrl: 'https://github.com/devkauanm',
   },
   {
     id: 'commercial-automation',
     title: 'Sistema de Automação Comercial',
-    desc: 'Automação para captura de formulários, integração com CRM, disparo inteligente de mensagens e gerenciamento completo do funil de clientes.',
+    desc: 'Automação para captura de dados de compras, integração com CRM, disparo inteligente de mensagens e gerenciamento completo do funil de clientes.',
     architecture:
-      'Formulários disparam webhooks para o n8n, que normaliza payloads, enriquece dados e sincroniza com o CRM via REST API. Regras de negócio definem etapas do funil, disparos condicionais e follow-ups automáticos. PostgreSQL armazena histórico de interações e dashboards consomem views materializadas para acompanhamento comercial.',
+      'Eventos de compra disparam webhooks para o n8n, que normaliza payloads, enriquece dados e sincroniza com o CRM via REST API. Regras de negócio definem etapas do funil, disparos condicionais e follow-ups automáticos. PostgreSQL armazena histórico de interações e dashboards consomem views materializadas para acompanhamento comercial.',
     tech: ['n8n', 'CRM', 'APIs', 'Automação'],
     tone: 'purple',
-    media: {
-      type: 'youtube',
-      videoId: 'dQw4w9WgXcQ',
+    banner: {
+      src: '/banner-Sistema-automacao-comercial.png',
+      alt: 'Banner do sistema de automação comercial',
     },
-    demoUrl: 'https://github.com/devkauanm',
+    media: {
+      type: 'image',
+      src: '/Sistema-automacao-comercial.png',
+      alt: 'Sistema de automação comercial',
+    },
     repoUrl: 'https://github.com/devkauanm',
   },
   {
@@ -99,27 +119,62 @@ export const PROJECTS: Project[] = [
       'Frontend em Next.js com React Server Components para páginas estáticas e client components para gráficos interativos. API routes consultam PostgreSQL com queries otimizadas; autenticação via Supabase Auth. Tailwind CSS garante UI responsiva; dados críticos são cacheados e invalidados via revalidação sob demanda.',
     tech: ['React', 'Next.js', 'SQL', 'Dashboards'],
     tone: 'cyan',
-    media: {
-      type: 'image',
-      src: '/placeholder.svg',
-      alt: 'Dashboard administrativo com métricas operacionais',
+    banner: {
+      src: '/banner-dashboard.png',
+      alt: 'Banner do dashboard administrativo',
     },
-    demoUrl: 'https://github.com/devkauanm',
-    repoUrl: 'https://github.com/devkauanm',
+    media: [
+      {
+        type: 'image',
+        src: '/dashboard-visao-geral.png',
+        alt: 'Visão geral do painel de prospecção',
+      },
+      {
+        type: 'image',
+        src: '/dashboard-custos.png',
+        alt: 'Custos e indicadores da operação',
+      },
+      {
+        type: 'image',
+        src: '/dashboard-captacao.png',
+        alt: 'Máquina de captação de leads',
+      },
+      {
+        type: 'image',
+        src: '/dashboard-mensagens.png',
+        alt: 'Performance de mensagens',
+      },
+    ],
   },
   {
     id: 'api-integrations',
-    title: 'Integrações com APIs',
-    desc: 'Coleção de integrações entre sistemas utilizando REST APIs, Webhooks e bancos de dados para orquestrar fluxos entre plataformas distintas.',
+    title: 'Automação de Prospecção BDR',
+    desc: 'Operação automatizada de BDR para buscar, enriquecer e qualificar leads, gerar mensagens comerciais com IA e iniciar contatos personalizados em escala.',
     architecture:
-      'Cada integração expõe contratos tipados (OpenAPI) e workers assíncronos consomem filas de eventos. Webhooks recebem payloads, validam assinatura HMAC e roteiam para handlers específicos. Docker isola serviços; Git versiona contratos e pipelines CI validam breaking changes antes do deploy.',
-    tech: ['REST APIs', 'Webhooks', 'Node.js', 'SQL'],
+      'O fluxo é orquestrado no n8n a partir de agendamentos e dados do Google Sheets. Leads são filtrados, processados em lotes e enriquecidos por buscas na web e informações do Instagram. A OpenAI gera mensagens de abordagem personalizadas; o envio acontece por WhatsApp e Chatwoot, enquanto Supabase/PostgreSQL registra conversas, contatos e status no CRM. Tratamentos de erro, limites e esperas controlam a operação para manter o processo confiável.',
+    tech: ['n8n', 'OpenAI', 'Google Sheets', 'WhatsApp', 'Chatwoot', 'Supabase', 'PostgreSQL', 'JavaScript'],
     tone: 'violet',
-    media: {
-      type: 'image',
-      src: '/placeholder.svg',
-      alt: 'Diagrama de integrações entre APIs e sistemas',
+    banner: {
+      src: '/banner-bdr.png',
+      alt: 'Banner da automação de prospecção BDR',
     },
+    media: [
+      {
+        type: 'image',
+        src: '/bdr-part1.png',
+        alt: 'Fluxo de automação BDR para busca e qualificação de leads',
+      },
+      {
+        type: 'image',
+        src: '/bdr-part2.png',
+        alt: 'Fluxo BDR para geração de mensagens comerciais com IA',
+      },
+      {
+        type: 'image',
+        src: '/bdr-part3.png',
+        alt: 'Fluxo BDR para envio de mensagens e atualização do CRM',
+      },
+    ],
     repoUrl: 'https://github.com/devkauanm',
   },
 ]

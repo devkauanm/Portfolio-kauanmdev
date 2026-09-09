@@ -1,6 +1,7 @@
 'use client'
 
 import { TechBrandIcon } from '@/lib/tech-icons'
+import { motion } from 'framer-motion'
 import type { TechIconKey } from '@/lib/tech-icons'
 import { SectionHeading } from '@/components/section-heading'
 import { TECH_STACK } from '@/lib/portfolio-data'
@@ -13,14 +14,21 @@ function TechCard({
   iconKey: TechIconKey
 }) {
   return (
-    <div className="group/card mx-2 flex w-[168px] shrink-0 flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-card px-4 py-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 sm:w-[184px]">
+    <motion.div
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.45 }}
+      className="group/card mx-2 flex w-[168px] shrink-0 flex-col items-center justify-center gap-3 rounded-2xl border border-border bg-card px-4 py-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 sm:w-[184px]"
+      aria-label={`Tecnologia ${name}`}
+    >
       <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/[0.04] transition-all duration-300 group-hover/card:scale-110">
         <TechBrandIcon iconKey={iconKey} className="h-7 w-7" />
       </span>
       <span className="text-center text-sm font-medium text-foreground/90">
         {name}
       </span>
-    </div>
+    </motion.div>
   )
 }
 
@@ -58,22 +66,15 @@ export function TechStack() {
         />
       </div>
 
-      <div className="marquee-group relative mt-12 w-full sm:mt-14">
-        <div
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-background to-transparent sm:w-24"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-background to-transparent sm:w-24"
-          aria-hidden="true"
-        />
-
-        <div className="flex flex-col gap-4 overflow-hidden">
-          <div className="overflow-hidden">
+      <div className="marquee-group relative mt-12 w-full overflow-x-clip py-4 sm:mt-14 sm:py-5">
+        <div className="mx-1 overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_7%,black_93%,transparent)] sm:mx-4">
+          <div className="flex flex-col gap-4 py-1">
+          <div className="overflow-visible">
             <MarqueeTrack />
           </div>
-          <div className="overflow-hidden">
+          <div className="overflow-visible">
             <MarqueeTrack reverse />
+          </div>
           </div>
         </div>
       </div>

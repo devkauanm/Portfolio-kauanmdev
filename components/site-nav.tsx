@@ -38,7 +38,7 @@ export function SiteNav() {
               <Terminal className="h-4 w-4" />
             </span>
             <span className="hidden truncate font-mono sm:inline">
-              kauan<span className="text-primary-light">.</span>dev
+              kauanm<span className="text-primary-light">.</span>dev
             </span>
           </a>
 

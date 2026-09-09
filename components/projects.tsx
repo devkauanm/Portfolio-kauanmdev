@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { ArrowUpRight, Workflow } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { ProjectModal } from '@/components/project-modal'
 import { SectionHeading } from '@/components/section-heading'
 import { COVER_TONES, PROJECTS, type Project } from '@/lib/portfolio-data'
@@ -29,23 +29,36 @@ export function Projects() {
           {PROJECTS.map((project, i) => (
             <motion.article
               key={project.id}
+              role="button"
+              tabIndex={0}
+              data-cursor-hover
+              onClick={() => openProject(project)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault()
+                  openProject(project)
+                }
+              }}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: (i % 2) * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-colors hover:border-primary/30"
+              className="group flex flex-col overflow-hidden rounded-3xl border border-border bg-card transition-colors hover:border-primary/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               <div
                 className={`relative flex h-44 items-center justify-center overflow-hidden border-b border-border bg-gradient-to-br ${
                   COVER_TONES[project.tone]
                 }`}
               >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={project.banner.src}
+                  alt={project.banner.alt}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 <div className="bg-grid absolute inset-0 opacity-30" />
-                <div className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-[rgba(11,17,32,0.6)] text-primary-light backdrop-blur-sm glow-shadow">
-                  <Workflow className="h-7 w-7" />
-                </div>
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card to-transparent to-70%" />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/35 to-black/10" />
               </div>
 
               <div className="flex flex-1 flex-col p-6">

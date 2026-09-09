@@ -37,6 +37,13 @@ export const metadata: Metadata = {
       'Transformo processos manuais em soluções inteligentes com IA, APIs e automações.',
     type: 'website',
     locale: 'pt_BR',
+    images: [{ url: '/placeholder.jpg', width: 1200, height: 630, alt: 'Portfólio de Kauan Martins Silva' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kauan Martins Silva — Desenvolvedor de Automações',
+    description: 'Soluções inteligentes com IA, APIs e automações.',
+    images: ['/placeholder.jpg'],
   },
 }
 
