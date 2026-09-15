@@ -47,7 +47,7 @@ export function Experience() {
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
                   <h4 className="text-lg font-semibold">Agência MADA</h4>
                   <span className="shrink-0 font-mono text-xs text-muted-foreground">
-                    2025 — Atualmente
+                    2025 — 2026
                   </span>
                 </div>
                 <p className="mt-1 text-sm font-medium text-primary-light">
