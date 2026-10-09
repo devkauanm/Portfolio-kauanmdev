@@ -46,12 +46,12 @@ export function SiteFooter() {
                 <Terminal className="h-4 w-4" />
               </span>
               <span className="font-mono">
-                kauan<span className="text-primary-light">.</span>dev
+                kauanm<span className="text-primary-light">.</span>dev
               </span>
             </div>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Transformo processos manuais em soluções inteligentes utilizando
-              Python, JavaScript, APIs, IA Generativa e automações com n8n.
+              Desenvolvo sistemas e soluções inteligentes com Python,
+              JavaScript, APIs, IA Generativa e tecnologias modernas.
             </p>
           </div>
 

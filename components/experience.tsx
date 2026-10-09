@@ -3,7 +3,7 @@ import { Reveal } from '@/components/reveal'
 import { SectionHeading } from '@/components/section-heading'
 
 const EXP_POINTS = [
-  'Desenvolvimento de automações',
+  'Desenvolvimento de sistemas',
   'Integração de APIs',
   'Criação de Agentes de IA',
   'Python & JavaScript',
@@ -11,9 +11,11 @@ const EXP_POINTS = [
 ]
 
 const COURSES = [
-  'Especialista em Algoritmos e Programação',
-  'Introdução à Ciência da Computação (CS50 - Curso de Havard no Brasil)',
+  'Especialista em Algoritmos e Programação — Universidade São Judas Tadeu (2026)',
+  'CS50: Introdução à Ciência da Computação — Harvard (2023)',
 ]
+
+const LANGUAGES = ['Inglês (intermediário)', 'Espanhol (intermediário)']
 
 export function Experience() {
   return (
@@ -25,7 +27,7 @@ export function Experience() {
         <SectionHeading
           eyebrow="Trajetória"
           title="Experiência & formação"
-          description="Da sala de aula à operação de clientes reais — construindo automações que funcionam em produção."
+          description="Da sala de aula à operação de clientes reais — desenvolvendo sistemas que funcionam em produção."
         />
 
         <div className="mt-12 grid grid-cols-1 items-start gap-10 lg:mt-16 lg:grid-cols-2 lg:gap-12">
@@ -47,16 +49,16 @@ export function Experience() {
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
                   <h4 className="text-lg font-semibold">Agência MADA</h4>
                   <span className="shrink-0 font-mono text-xs text-muted-foreground">
-                    2025 — 2026
+                    05/2025 — 09/2026
                   </span>
                 </div>
                 <p className="mt-1 text-sm font-medium text-primary-light">
-                  Gestor de Automações
+                  Desenvolvedor de Automações e Sistemas
                 </p>
                 <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                  Liderança na construção de automações, integrações de API e
-                  agentes de IA que eliminam trabalho manual e aceleram a
-                  operação dos clientes.
+                  Desenvolvimento, orquestração e manutenção de fluxos com n8n e
+                  Python; integração via APIs REST, Webhooks e SQL; soluções com
+                  IA Generativa, LLMs e Prompt Engineering para apoiar decisões.
                 </p>
                 <ul className="mt-5 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
                   {EXP_POINTS.map((point) => (
@@ -92,11 +94,11 @@ export function Experience() {
                     Universidade São Judas Tadeu
                   </h4>
                   <span className="font-mono text-xs text-muted-foreground">
-                    2026 — 2029
+                    02/2026 — 12/2029
                   </span>
                 </div>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Bacharelado em Ciência da Computação
+                  Bacharelado em Ciência da Computação (em andamento)
                 </p>
               </div>
             </div>
@@ -124,6 +126,14 @@ export function Experience() {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-5 border-t border-border pt-4">
+                  <h4 className="font-mono text-[10px] uppercase tracking-[0.1em] text-primary-light">
+                    Idiomas
+                  </h4>
+                  <p className="mt-2 text-sm text-muted-foreground">
+                    {LANGUAGES.join(' · ')}
+                  </p>
+                </div>
               </div>
             </div>
           </Reveal>

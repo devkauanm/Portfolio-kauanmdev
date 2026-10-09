@@ -11,7 +11,7 @@ export function About() {
             Sobre mim
           </span>
           <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-            Automação com propósito, código com precisão
+            Sistemas com propósito, código com precisão
           </h2>
         </Reveal>
 
@@ -24,14 +24,14 @@ export function About() {
               </strong>{' '}
               e{' '}
               <strong className="font-medium text-foreground">
-                Desenvolvedor de Automações
+                Desenvolvedor de Automações e Sistemas
               </strong>{' '}
               na Agência MADA.
             </p>
             <p>
-              Tenho experiência desenvolvendo soluções que automatizam processos,
-              integram APIs e utilizam Inteligência Artificial para aumentar
-              produtividade. Sempre com foco em resultado real para quem usa.
+              Tenho experiência desenvolvendo sistemas que integram APIs e
+              utilizam Inteligência Artificial para resolver problemas e aumentar
+              a produtividade. Sempre com foco em resultado real para quem usa.
             </p>
             <p>
               Minha atuação envolve desenvolvimento com{' '}

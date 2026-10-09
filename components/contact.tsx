@@ -68,8 +68,8 @@ export function Contact() {
       <div className="relative mx-auto w-full max-w-6xl px-4 sm:px-6 2xl:max-w-7xl">
         <SectionHeading
           eyebrow="Contato"
-          title="Vamos automatizar algo juntos?"
-          description="Conte um pouco sobre o processo que você quer otimizar — respondo rápido pelo e-mail ou pelas redes."
+          title="Vamos conversar sobre uma oportunidade?"
+          description="Estou em busca de uma oportunidade efetiva como Desenvolvedor de Sistemas Jr. ou Desenvolvedor Full-Stack. Se você está recrutando ou quer conhecer meu trabalho, será um prazer conversar."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:mt-14 lg:grid-cols-2">
@@ -159,7 +159,7 @@ export function Contact() {
                   name="message"
                   required
                   rows={5}
-                  placeholder="Conte sobre o processo que você quer automatizar..."
+                  placeholder="Conte sobre a vaga ou deixe sua mensagem..."
                   className="w-full resize-none rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition-colors placeholder:text-muted-foreground focus:border-primary"
                 />
               </div>

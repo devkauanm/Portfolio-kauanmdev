@@ -61,8 +61,8 @@ export function TechStack() {
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 2xl:max-w-7xl">
         <SectionHeading
           eyebrow="Stack técnica"
-          title="Ferramentas que uso para construir e automatizar"
-          description="Uma combinação de linguagens, frameworks e plataformas low-code para entregar soluções completas, do backend à orquestração de agentes de IA."
+          title="Tecnologias que uso para desenvolver sistemas"
+          description="Java, Python, JavaScript, React, Node.js, SQL e HTML/CSS, além de APIs REST, Webhooks, LLMs e Prompt Engineering para desenvolver soluções completas com Low-Code e High-Code."
         />
       </div>
 

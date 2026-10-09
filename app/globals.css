@@ -307,6 +307,31 @@ body.cursor-enabled [contenteditable] {
   }
 }
 
+@keyframes code-type {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes code-caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.code-typing-line {
+  clip-path: inset(0 100% 0 0);
+  animation: code-type 0.42s steps(28, end) forwards;
+}
+
+.code-caret {
+  animation: code-caret-blink 1s steps(2, start) infinite;
+  background-color: var(--primary-light);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -315,5 +340,8 @@ body.cursor-enabled [contenteditable] {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+  .code-typing-line {
+    clip-path: none;
   }
 }

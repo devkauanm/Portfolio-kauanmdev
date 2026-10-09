@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { ArrowRight, MessageSquare, ChevronDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Reveal } from '@/components/reveal'
-import { AutomationFlow } from '@/components/automation-flow'
+import { CodeTyping } from '@/components/code-typing'
 
 export function Hero() {
   return (
@@ -56,14 +56,14 @@ export function Hero() {
 
           <Reveal delay={0.16}>
             <p className="text-gradient mt-4 text-lg font-medium sm:text-xl">
-              Desenvolvedor de Automações • Inteligência Artificial • Sistemas
+              Desenvolvedor de Sistemas • Full-Stack • Automações
             </p>
           </Reveal>
 
           <Reveal delay={0.24}>
             <p className="mt-[22px] max-w-[540px] text-base leading-relaxed text-muted-foreground sm:text-lg">
-              Transformo processos manuais em soluções inteligentes utilizando
-              Python, JavaScript, APIs, IA Generativa e automações com n8n.
+              Desenvolvo sistemas e soluções inteligentes com Python,
+              JavaScript, APIs, IA Generativa e tecnologias modernas.
             </p>
           </Reveal>
 
@@ -91,7 +91,7 @@ export function Hero() {
         </div>
 
         <Reveal direction="scale" delay={0.2} className="order-last mx-auto block w-full max-w-[680px] lg:order-none lg:mx-0">
-          <AutomationFlow />
+          <CodeTyping />
         </Reveal>
       </div>
 

@@ -22,7 +22,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="Projetos"
           title="Soluções que já saíram do papel"
-          description="Uma seleção de agentes, automações e integrações construídos para times comerciais e operacionais reais."
+          description="Uma seleção de sistemas, agentes e integrações construídos para desafios comerciais e operacionais reais."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-6 sm:mt-14 md:grid-cols-2">

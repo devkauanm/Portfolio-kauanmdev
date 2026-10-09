@@ -94,20 +94,20 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'commercial-automation',
-    title: 'Sistema de Automação Comercial',
-    desc: 'Automação para captura de dados de compras, integração com CRM, disparo inteligente de mensagens e gerenciamento completo do funil de clientes.',
+    title: 'Sistema Comercial',
+    desc: 'Sistema para captura de dados de compras, integração com CRM, comunicação inteligente e gerenciamento completo do funil de clientes.',
     architecture:
       'Eventos de compra disparam webhooks para o n8n, que normaliza payloads, enriquece dados e sincroniza com o CRM via REST API. Regras de negócio definem etapas do funil, disparos condicionais e follow-ups automáticos. PostgreSQL armazena histórico de interações e dashboards consomem views materializadas para acompanhamento comercial.',
-    tech: ['n8n', 'CRM', 'APIs', 'Automação'],
+    tech: ['n8n', 'CRM', 'APIs', 'Sistemas'],
     tone: 'purple',
     banner: {
       src: '/banner-Sistema-automacao-comercial.png',
-      alt: 'Banner do sistema de automação comercial',
+      alt: 'Banner do sistema comercial',
     },
     media: {
       type: 'image',
       src: '/Sistema-automacao-comercial.png',
-      alt: 'Sistema de automação comercial',
+      alt: 'Sistema comercial integrado a CRM',
     },
   },
   {
@@ -147,21 +147,21 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'api-integrations',
-    title: 'Automação de Prospecção BDR',
-    desc: 'Operação automatizada de BDR para buscar, enriquecer e qualificar leads, gerar mensagens comerciais com IA e iniciar contatos personalizados em escala.',
+    title: 'Sistema de Prospecção BDR',
+    desc: 'Sistema de BDR para buscar, enriquecer e qualificar leads, gerar mensagens comerciais com IA e iniciar contatos personalizados em escala. O processo alcançou 390 leads em 12 etapas, com 13 integrações.',
     architecture:
       'O fluxo é orquestrado no n8n a partir de agendamentos e dados do Google Sheets. Leads são filtrados, processados em lotes e enriquecidos por buscas na web e informações do Instagram. A OpenAI gera mensagens de abordagem personalizadas; o envio acontece por WhatsApp e Chatwoot, enquanto Supabase/PostgreSQL registra conversas, contatos e status no CRM. Tratamentos de erro, limites e esperas controlam a operação para manter o processo confiável.',
     tech: ['n8n', 'OpenAI', 'Google Sheets', 'WhatsApp', 'Chatwoot', 'Supabase', 'PostgreSQL', 'JavaScript'],
     tone: 'violet',
     banner: {
       src: '/banner-bdr.png',
-      alt: 'Banner da automação de prospecção BDR',
+      alt: 'Banner do sistema de prospecção BDR',
     },
     media: [
       {
         type: 'image',
         src: '/bdr-part1.png',
-        alt: 'Fluxo de automação BDR para busca e qualificação de leads',
+        alt: 'Fluxo do sistema BDR para busca e qualificação de leads',
       },
       {
         type: 'image',
@@ -180,8 +180,8 @@ export const PROJECTS: Project[] = [
 
 export const DIFFERENTIALS: { title: string; desc: string; icon: LucideIcon }[] = [
   {
-    title: 'Automação de Processos',
-    desc: 'Elimino trabalho manual repetitivo com fluxos inteligentes e confiáveis.',
+    title: 'Desenvolvimento de Sistemas',
+    desc: 'Construo sistemas confiáveis que resolvem desafios reais e simplificam operações.',
     icon: Workflow,
   },
   {
@@ -205,14 +205,14 @@ export const DIFFERENTIALS: { title: string; desc: string; icon: LucideIcon }[] 
     icon: Puzzle,
   },
   {
-    title: 'Low-Code',
-    desc: 'Acelero entregas combinando low-code com código sob medida quando necessário.',
+    title: 'Low-Code & High-Code',
+    desc: 'Combino plataformas Low-Code e desenvolvimento High-Code para equilibrar agilidade, flexibilidade e soluções sob medida.',
     icon: Zap,
   },
 ]
 
 export const STATS: { label: string; value: number; suffix: string }[] = [
-  { label: 'Automações Desenvolvidas', value: 40, suffix: '+' },
+  { label: 'Sistemas Desenvolvidos', value: 40, suffix: '+' },
   { label: 'APIs Integradas', value: 25, suffix: '+' },
   { label: 'Projetos Entregues', value: 18, suffix: '+' },
   { label: 'Tecnologias Dominadas', value: 13, suffix: '' },
@@ -220,14 +220,14 @@ export const STATS: { label: string; value: number; suffix: string }[] = [
 
 export const TIMELINE: { year: string; title: string; desc: string }[] = [
   {
-    year: '2025',
-    title: 'Gestor de Automações — Agência MADA',
-    desc: 'Lidero o desenvolvimento de automações, integrações de API e agentes de IA que eliminam trabalho manual e aceleram a operação dos clientes.',
+    year: '05/2025 — 09/2026',
+    title: 'Desenvolvedor de Automações e Sistemas — Agência MADA',
+    desc: 'Desenvolvimento, orquestração e manutenção de fluxos com n8n e Python; integração de sistemas e serviços externos por APIs REST, Webhooks e SQL; implementação de soluções com IA Generativa, LLMs e Prompt Engineering para otimizar operações e apoiar decisões.',
   },
   {
-    year: '2024',
+    year: '02/2024 — 04/2025',
     title: 'Jovem Aprendiz Administrativo — EFD, Diadema',
-    desc: 'Atuação com clientes internacionais em inglês e espanhol, acompanhamento de pedidos para o mercado LATAM e gestão de devoluções, garantindo o fluxo operacional e a resolução de pendências. Também trabalhei com emissão e alteração de pedidos no sistema TOTVS Protheus.',
+    desc: 'Atendimento a clientes internacionais em inglês e espanhol e acompanhamento de envios para o mercado LATAM. Gestão de devoluções de produtos não conformes, acompanhamento de pendências e fluxo operacional, além de emissão e alteração de pedidos no ERP TOTVS Protheus.',
   },
   {
     year: '2022',

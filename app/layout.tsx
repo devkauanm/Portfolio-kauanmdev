@@ -17,12 +17,13 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Kauan Martins Silva — Desenvolvedor de Automações',
+  title: 'Kauan Martins Silva — Desenvolvedor de Sistemas & Full-Stack',
   description:
-    'Portfólio de Kauan Martins Silva — Desenvolvedor de Automações especializado em IA generativa, integrações de API e soluções low-code com n8n, Python e JavaScript.',
+    'Portfólio de Kauan Martins Silva — Desenvolvedor de Sistemas e Full-Stack, com experiência em IA generativa, integrações de API, Low-Code e High-Code.',
   generator: 'v0.app',
   keywords: [
-    'automação',
+    'desenvolvimento de sistemas',
+    'desenvolvedor full-stack',
     'IA generativa',
     'n8n',
     'integrações de API',
@@ -32,17 +33,17 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Kauan Martins Silva' }],
   openGraph: {
-    title: 'Kauan Martins Silva — Desenvolvedor de Automações',
+    title: 'Kauan Martins Silva — Desenvolvedor de Sistemas & Full-Stack',
     description:
-      'Transformo processos manuais em soluções inteligentes com IA, APIs e automações.',
+      'Desenvolvedor de Sistemas e Full-Stack. Transformando ideias em realidade com IA, APIs e tecnologias modernas.',
     type: 'website',
     locale: 'pt_BR',
     images: [{ url: '/placeholder.jpg', width: 1200, height: 630, alt: 'Portfólio de Kauan Martins Silva' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kauan Martins Silva — Desenvolvedor de Automações',
-    description: 'Soluções inteligentes com IA, APIs e automações.',
+    title: 'Kauan Martins Silva — Desenvolvedor de Sistemas & Full-Stack',
+    description: 'Sistemas e soluções inteligentes com IA, APIs e tecnologias modernas.',
     images: ['/placeholder.jpg'],
   },
 }

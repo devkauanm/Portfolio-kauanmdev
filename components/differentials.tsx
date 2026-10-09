@@ -21,7 +21,7 @@ export function Differentials() {
         <SectionHeading
           eyebrow="Diferenciais"
           title="O que trago para cada projeto"
-          description="Além do código: uma visão de produto e de processo que faz cada automação gerar resultado de verdade."
+          description="Além do código: visão de produto e domínio de diferentes abordagens para criar soluções que geram resultado."
         />
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-3">
